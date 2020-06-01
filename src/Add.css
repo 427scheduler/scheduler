@@ -1,0 +1,37 @@
+:root {
+    --theme-color: #145374;
+    --accent-color: #5588a3;
+    --dark-color: #00334e;
+    --highlight-color: #e8e8e8;
+  }
+
+.tabs-container {
+    width: 100%;
+    background-color: white;
+    height: 80px;
+    position: fixed;
+    margin-top: -95px;
+    z-index: -1;
+    padding: 20px;
+}
+
+.tabs {
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    width: 60%;
+}
+
+.tab {
+    padding: 6px;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: var(--highlight-color);
+}
+
+.activeTab {
+    border-bottom: 3px solid var(--theme-color);
+    color: var(--dark-color);
+}

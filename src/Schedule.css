@@ -1,0 +1,166 @@
+:root {
+    --theme-color: #145374;
+    --accent-color: #5588a3;
+    --dark-color: #00334e;
+    --highlight: #888888;
+    --light-highlight: #e8e8e8;
+    --meeting-color: rgb(220, 20, 60);
+    --meeting-color-dark: rgba(220, 20, 60, 0.5);
+    --flight-color: royalblue;
+    --apt-color:green;
+  }
+
+body {
+    margin-right: 2%;
+}
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    /*border: 1px dashed yellow;*/
+}
+
+.day-header {
+    text-align: center;
+}
+
+.day-container {
+    width: inherit;
+    overflow: scroll;
+    height: 75%;
+    margin-top: 1%;
+    /*border: 1px dashed orange;*/
+}
+
+.grid-container {
+    height: 55%;
+    position: absolute;
+    border: 1px dashed red;
+    overflow: scroll;
+    left: 15%;
+    z-index: -1;
+    margin-top: 10px;
+}
+
+.gridline {
+    height: 100%;
+    display: inline-block;
+    width: 90px;
+}
+
+.line {
+    height: 100%;
+    border-left: 1px solid var(--light-highlight);
+}
+
+.schedule-table table {
+    overflow: scroll;
+    margin-top: 0;
+}
+.schedule-table td, .schedule-table th {
+    min-width: 90px;
+    border-right: 1px solid var(--light-highlight);
+    text-align: left;
+}
+
+.schedule-table th {
+    text-align: left;
+    height: 30px;
+    vertical-align: top;
+}
+
+
+.schedule-table .pilot-col {
+    width: 100%;
+    white-space: nowrap;
+    padding-right: 5px;
+    text-align: right;
+    /*border: 1px dashed purple;*/
+}
+
+.schedule-table tr {
+    height: 100%;
+    border-bottom: none;
+    padding-left: 0;
+}
+
+tr.underline {
+    border-bottom: 1px solid var(--theme-color);
+}
+
+.apt, .meeting, .flight {
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    padding: 2px;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.meeting {
+    background-color: var(--meeting-color);
+}
+
+.flight {
+    background-color: var(--flight-color);
+}
+
+.blackout{
+    background-color: var(--light-highlight);
+}
+
+.apt {
+    background-color: var(--apt-color);
+}
+
+.legend-container {
+    position: fixed;
+    display: inline-flex;
+    bottom: 5px;
+    height: 40px;
+    margin-left: 15%;
+    background-color: white;
+}
+.legend-color {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.legend-entry {
+    margin: auto;
+    margin-right: 40px;
+}
+
+
+.lg-view{
+    display:inline-block;
+ }
+ 
+ .sm-view{
+    display:none;
+ }
+
+.schedule-tabs {
+    float: right;
+    font-size: 12px;
+    width: auto !important;
+}
+
+.schedule-tab {
+    font-size: 20px !important;
+    padding: 5px !important;
+    margin-right: 5px !important;
+}
+
+ @media screen and (max-width: 700px) {
+    .lg-view{
+       display:none;
+    }
+
+    .sm-view{
+       display:inline-block;
+    }
+}
+
+

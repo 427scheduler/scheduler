@@ -1,0 +1,145 @@
+:root {
+    --theme-color: #145374;
+    --accent-color: #5588a3;
+    --dark-color: #00334e;
+    --highlight: #888888;
+    --light-highlight: #e8e8e8;
+  }
+  
+ 
+.personnelInfo {
+    width: 100%;
+    margin-top: -5%;
+}
+
+.myInfo {
+    width: 60%;
+    margin: auto;
+    margin-top: 10vh;
+    display: inline-block;
+}
+
+.teamInfo {
+    width: 30%;
+    margin: auto;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 10vh;
+    vertical-align: top;
+}
+
+.teamTable {
+    border-collapse: collapse;
+    width: 80%;
+}
+.teamTable tr{
+    border: 1px solid #ddd;
+    line-height: 30px;
+}
+.teamTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.teamTable tr:hover {background-color: #ddd;}
+
+.teamTable th {
+  padding: 12px;
+  text-align: left;
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.infoField {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoField h5 {
+    padding-top: 2%;
+}
+
+.pinput {
+    background-color: var(--light-highlight);
+    border-radius: 30px;
+    height: 20px;  
+    width: 70%;
+    padding: 20px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+
+.logout-btn {
+    font-size: 20px;
+    color: white;
+    background-color: var(--theme-color);
+    border: 3px solid var(--theme-color);
+    border-radius: 25px;
+    width: 150px;
+    padding: 1% 0 1% 0;
+    margin-right: 20px;
+}
+
+.logout-btn:hover {
+    transition-duration: 50ms;
+    color: var(--theme-color);
+    background-color: white;
+    border: 3px solid var(--theme-color);
+}
+
+#approval-header {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#approval-header p {
+    font-size: 13px;
+    color: grey
+}
+
+
+.approvalsTable {
+    margin-bottom: 40px;
+}
+.approve-btn {
+    font-size: 12px;
+    color: white;
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+    border-radius: 25px;
+    width: 80px;
+    padding: 1% 0 1% 0;
+}
+
+.approved {
+    font-size: 12px;
+    color: white;
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-radius: 25px;
+    width: 80px;
+    padding: 1% 0 1% 0;
+}
+
+.admin-tag {
+    font-size: 8px;
+    color: white;
+    background-color: darkred;
+    border: 0.5px solid darkred;
+    border-radius: 25px;
+    width: 40px;
+    padding: 3px 0 2px 0;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#approvalsrole {
+    text-align: center;
+    font-size: 16px;
+    color: var(--dark-color);
+    border-radius: 10px;
+}
+option {
+text-align: left;
+/* reset to left*/
+}

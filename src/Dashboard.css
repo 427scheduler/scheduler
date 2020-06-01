@@ -1,0 +1,289 @@
+:root {
+    --theme-color: #145374;
+    --accent-color: #5588a3;
+    --dark-color: #00334e;
+    --highlight: #888888;
+    --light-highlight: #e8e8e8;
+    --meeting-color: rgb(220, 20, 60);
+    --meeting-color-dark: rgba(220, 20, 60, 0.5);
+    --flight-color: royalblue;
+    --apt-color:green;
+  }
+
+
+.upcomingFlights {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  height: 270px; 
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  -ms-overflow-style: none;
+}
+.upcomingFlights::-webkit-scrollbar {
+  display: none;
+}
+
+.upcomingEvents {
+  overflow-y: visible;
+  height: auto;
+}
+
+.flightCard {
+  border-radius: 10px;
+  min-width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  box-shadow: 3px 3px 10px lightgray;
+  background: rgb(0,51,78);
+  background: linear-gradient(90deg, rgba(0,51,78,1) 0%, rgba(20,83,116,1) 100%);
+}
+
+.flightCard:hover {
+  background-color: rgb(0,51,78);
+  background-image:linear-gradient(to right, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 40%, rgba(255,255,255,.7) 100%);
+  background-repeat:no-repeat;
+  background-size: 200% 100%; 
+  transition:background-size 1s, background-color 1s, transform 100ms;
+  transform: scale(1.05);
+}
+
+.addFlightBtn:hover {
+  transform: scale(1.05);
+  transition-duration: 150ms;
+}
+
+.flight-card-content {
+  background: white;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px; 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.date {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 80px;
+  padding-left: 25px;
+  padding-top: 30px;
+  display: flex;
+  color: white;
+  
+  flex-direction: column;
+  /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./img/sunset.png');
+  background-size: cover;*/
+}
+
+
+.date h2 {
+  font-weight: 100;
+}
+
+.addFlight {
+  background: white;
+  border: 1px dashed var(--highlight);
+  color: var(--highlight);
+  min-width: 200px;
+  height: 100%;
+  text-align: center;
+  padding: 15px;
+  min-width: 200px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  
+}
+
+.addFlightLogo {
+  width: 50px;
+  margin-top: 20%;
+  box-shadow: 0px 0px 0px white;
+}
+
+.addFlightText {
+  color: var(--highlight);
+}
+
+.addFlightBtn {
+  margin-top: 20px;
+  border: 1px solid var(--theme-color);
+  border-radius: 3px;
+  padding: 7px;
+  color: white;
+  background-color: var(--theme-color);
+
+}
+
+.my-schedule-div h2{
+  display: inline-block;
+}
+
+.weekend-toggle-div {
+  float: right;
+  margin-right: 30%;
+}
+.show-weekends-toggle {
+  margin-left: 50px;
+  height: 90%;
+}
+
+.toggle-active {
+  border-bottom: 2px solid var(--dark-color);
+}
+
+
+hr {
+  margin-bottom: 10px;
+  border: none;
+  height: 0.5px;;
+}
+
+.infoLine {
+  margin-bottom: 5px;
+}
+
+.title {
+  width: 30%;
+  color: rgb(82, 82, 82);
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.upcomingEvents {
+  height: 50vh;
+  width: 100%;
+}
+  
+.weekView {
+  width: 70%;
+  height: 100%;
+  display: inline-flex;
+  text-align: center;
+  vertical-align: top;
+}
+
+.monthView {
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  display: inline-block;
+  /*border: 1px dashed blue;*/
+}
+
+.dayView {
+  /*border: 1px solid red; */
+  flex:1 1 auto;
+  display: inline-block;
+  margin: 0.5%;
+  top: 0;
+  width: 40%;
+  flex-wrap:wrap;
+  vertical-align: top;
+}
+
+.dayHeader {
+  padding: 10px;
+}
+
+h3 {
+  display: inline-block;
+  color: var(--theme-color);
+}
+
+#date{
+  color: var(--accent-color);
+  padding-right: 5px;
+}
+
+.flightEvent, .meetingEvent, .aptEvent {
+  margin-top: 5px;
+  text-align: left;
+  padding: 5px;
+  min-height: 45px;
+  color: white;
+}
+
+.flightEvent:hover, .meetingEvent:hover, .aptEvent:hover {
+  opacity: 0.6;
+}
+.dayView p {
+  font-size: 1vw;
+}
+
+.dayView h5 {
+  font-size: 16px;
+}
+
+
+.meetingEvent {
+  background-color: var(--meeting-color);
+}
+
+.flightEvent {
+  background-color: var(--flight-color);
+}
+
+.aptEvent {
+  background-color: var(--apt-color);
+}
+
+.curweek {
+  font-weight: bold;
+}
+
+.month-calendar {
+  text-align: center;
+}
+.month-calendar-header {
+  color: var(--dark-color);
+  font-size: 20px;
+  font-weight: bolder;
+  width: 70%;
+  display: inline-block;
+}
+
+.month-btn {
+  display: inline-block;
+  width: 5%;
+}
+
+.calendar-table tr{
+  border: none;
+}
+
+.cal-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: none;
+}
+
+.hasFlight {
+  background-color: var(--flight-color);
+}
+
+@media screen and (max-width: 800px) {
+  .weekView {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .monthView {
+    width: 100%;
+    height: 100%;
+  }
+}
+

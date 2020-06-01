@@ -1,0 +1,107 @@
+:root {
+    --theme-color: #145374;
+    --accent-color: #5588a3;
+    --dark-color: #00334e;
+    --highlight: #888888;
+    --light-highlight: #e8e8e8;
+  }
+  
+
+.login_input {
+    background-color: var(--light-highlight);
+    border-radius: 40px;
+    height: 70px;  
+    width: 100%;
+    padding: 40px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.surow {
+    width: 100%;
+}
+
+.sutext {
+    color: var(--theme-color);
+    width: 100%;
+    font-size: 15px;
+}
+.suinput{
+    background-color: var(--light-highlight);
+    border-radius: 40px; 
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.su_narrow{
+    width: 47%;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+
+#emailError, #passwordError , #firstNameError, #lastNameError{
+    color: red;
+}
+
+.form {
+    width: 80%;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.userForm, .pswdForm {
+    color: var(--theme-color);
+    margin-bottom: 10px;
+}
+
+.login-form-btns {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.sign-up-btn {
+    font-size: 25px;
+    color: white;
+    background-color: var(--highlight);
+    border: 3px solid var(--highlight);
+    border-radius: 25px;
+    width: 150px;
+    padding: 1% 0 1% 0;
+    margin-right: 20px;
+}
+
+.sign-in-btn {
+    font-size: 25px;
+    color: white;
+    background-color: var(--theme-color);
+    border: 3px solid var(--theme-color);
+    border-radius: 25px;
+    width: 150px;
+    padding: 1% 0 1% 0;
+}
+
+.sign-in-btn:hover, .approve-btn:hover {
+    transition-duration: 50ms;
+    color: var(--theme-color);
+    background-color: white;
+    border: 1px solid var(--theme-color);
+}
+
+.verify {
+    margin: auto;
+    text-align: center;
+}
+#verifyIcon {
+    max-width: 100px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10px;
+}
+#verifyMessage { 
+    width: 100%;
+}

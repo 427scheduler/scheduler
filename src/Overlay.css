@@ -1,0 +1,139 @@
+:root {
+    --theme-color: #145374;
+    --accent-color: #5588a3;
+    --dark-color: #00334e;
+    --highlight: #888888;
+    --light-highlight: #e8e8e8;
+    --meeting-color: rgb(220, 20, 60);
+    --meeting-color-dark: rgba(220, 20, 60, 0.5);
+    --flight-color: royalblue;
+    --apt-color:green;
+  }
+
+/* The overlay (background) */
+.overlay {
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content/Box */
+.overlay-content {
+    background-color: white;
+    margin: auto; /* 10% from the top and centered */
+    width: 60%; /* Could be more or less, depending on screen size */
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar {
+    background: var(--theme-color);
+    min-height: 100%;
+    width: 35%;
+    padding: 20px;
+}
+
+.sidebar-content {
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+.sidebar h4 , .sidebar h1{
+    color: white;
+}
+
+.modal-content {
+    min-height: 100%;
+    width: 65%;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.modal-content table {
+    color: var(--theme-color);
+    text-align: left;
+}
+
+.modal-content .dot {
+    float: left;
+}
+
+.modal-content tr {
+    border: none;
+}
+
+.bold {
+    color: var(--dark-color);
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+    white-space: nowrap;
+    width: 1%;
+}
+
+.flight-event {
+    background-color: var(--flight-color);
+}
+.meeting-event {
+    background-color: var(--meeting-color);
+}
+.apt-event {
+    background-color: var(--apt-color);
+}
+
+.buttons {
+    float: right;
+}
+/* The Edit Button */
+.edit,  .delete {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.edit:hover {
+    content: url('./img/edit-hover.png');
+}
+
+.delete:hover {
+    content: url('./img/delete-hover.png');
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*---------------------SUCCESS MODAL---------------------------*/
+
+.success-modal {
+    display: none;
+  }
+  
+  .success-content {
+    width: 400px !important;
+    padding: 2%;
+  }
+  
+  .icon-box img {
+    width: 80px;
+  }
+  
+  .success-modal-body h3{
+    line-height: 80px;
+    height: 80px;
+    margin-left: 20px;
+  }
