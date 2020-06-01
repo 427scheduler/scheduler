@@ -1,0 +1,28 @@
+{
+  "short_name": "Scheduler",
+  "name": "Scheduler",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }, {
+      "src": "/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "/icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#145374",
+  "background_color": "#ffffff",
+  "orientation": "landscape"
+}
