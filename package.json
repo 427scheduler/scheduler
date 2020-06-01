@@ -2,7 +2,7 @@
   "name": "scheduler",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jennynotjen.github.io/scheduler/",
+  "homepage": "https://427scheduler.github.io/scheduler/",
   "dependencies": {
     "firebase": "^6.3.4",
     "firebase-admin": "^8.12.1",
