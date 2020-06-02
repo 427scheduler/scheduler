@@ -2,13 +2,14 @@ const firebase = require( "./node_modules/firebase/app");
 require("./node_modules/firebase/firestore");
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBUWu46P2u56hwTx4ClhB8upvQBOdE-wWA",
-    authDomain: "scheduler-188df.firebaseapp.com",
-    databasei: "https://scheduler-188df.firebaseio.com",
-    projectId: "scheduler-188df",
-    storageBucket: "scheduler-188df.appspot.com",
-    messagingSenderId: "1042925041868",
-    appId: "1:1042925041868:web:dc80c0076e941eeb"
+    apiKey: "AIzaSyAohLavrlX4eXR0B2LNPzVuDEnywZSQL9Q",
+    authDomain: "scheduler-f6af6.firebaseapp.com",
+    databaseURL: "https://scheduler-f6af6.firebaseio.com",
+    projectId: "scheduler-f6af6",
+    storageBucket: "scheduler-f6af6.appspot.com",
+    messagingSenderId: "512115091360",
+    appId: "1:512115091360:web:b703920b22e8fcb5d0e6c5",
+    measurementId: "G-VH21D4C38F"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -595,8 +596,6 @@ function error() {
 }
 
 function createDates(month, start, end) {
-    var twilights = ['1720', '1800', '1820', '1830', '1840', '1850', '1900', '1920', ""];
-    var pilots = ['csullenberger', 'chadfield','wwright', 'clindbergh', 'cyeager', 'aearhart', 'pmitchell', 'jdoolittle', 'ehartmann', 'owright', ''];
     
     for (var i = start ; i <= end ; i++) {
         date = '2020-' + month + '-' + (i < 10 ? '0' : '') + i
@@ -604,13 +603,13 @@ function createDates(month, start, end) {
         ref.get()
             .then((docSnapshot) => {if (!docSnapshot.exists)
             { ref.set({
-                dutymtp: pilots[getRandom(0,9)],
-                oic: pilots[getRandom(0,9)],
-                groundrun: pilots[getRandom(0,9)],
-                twilightciv: twilights[getRandom(0, 8)],twilightnaut: twilights[getRandom(0, 7)],
-                desksgtday: pilots[getRandom(0,9)], desksgtnight: pilots[getRandom(0,9)],
-                fdoday: pilots[getRandom(0,9)], fdonight: pilots[getRandom(0,9)],
-                sdo: pilots[getRandom(0,9)],
+                dutymtp: null,
+                oic: null,
+                groundrun: null,
+                twilightciv: null,twilightnaut: null,
+                desksgtday: null, desksgtnight: null,
+                fdoday:null, fdonight: null,
+                sdo: null,
             })
             .then(()=> {
                 console.log(date + " successfully written!"); return;

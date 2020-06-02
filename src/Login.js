@@ -310,8 +310,19 @@ class Login extends React.Component{
                         .catch(function(error) {
                         console.error("Error writing " + firstName + " " + lastName + ": ", error);
                     });
-        
-                    firebase.firestore().collection("pilots").doc('0').update({pilots: firebase.firestore.FieldValue.arrayUnion(uid)});
+                    
+
+                    //Default team is 0
+                    firebase.firestore().collection("pilots").doc('0').get().then((snapshotQuery)=> {
+                        console.log(snapshotQuery)
+                        if (snapshotQuery) {
+                            firebase.firestore().collection("pilots").doc('0').update({pilots: firebase.firestore.FieldValue.arrayUnion(uid)});
+                        }
+                        else {
+                            firebase.firestore().collection("pilots").doc('0').set({pilots: [uid]});
+                        }
+                    })
+                    
         
                     firebase.firestore().collection("users").doc(firebaseid).set({
                         id: uid,

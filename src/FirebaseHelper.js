@@ -77,16 +77,25 @@ function firebaseDeleteAptMeeting(type, id, props) {
 
 
 function firebaseCreateDate(date) {
-    firebase.firestore().collection("dates").doc(date).set({
-        dutymtp: null,
-        sdd: null,
-        oic: null,
-        groundrun: null,
-        twilightciv: null,twilightnaut: null,
-        desksgtday: null, desksgtnight: null,
-        fdoday: null, fdonight: null,
-        events: {},
-    });
+    const ref = firebase.firestore().collection("dates").doc(date);
+    ref.get()
+        .then((docSnapshot) => {if (!docSnapshot.exists)
+        { ref.set({
+            dutymtp: null,
+            oic: null,
+            groundrun: null,
+            twilightciv: null,twilightnaut: null,
+            desksgtday: null, desksgtnight: null,
+            fdoday:null, fdonight: null,
+            sdo: null,
+        })
+        .then(()=> {
+            console.log(date + " successfully written!"); return;
+        })
+        .catch(function(error) {
+            console.error("Error writing date: ", error);
+        });
+    }});
 }
 
 

@@ -50,8 +50,8 @@ function RenderDayHeader(props) {
     var curDate = new Date();
     var diff = Math.round((displayDate.getTime() - curDate.getTime())/(24*60*60*1000));
 
-    // Only show flights for last 3 days to the next 2 weeks
-    var disableLeft = diff === -3;
+    // Only show flights for last week to the next 2 weeks
+    var disableLeft = diff === -7;
     var disableRight= diff === 14;
     return (
         <div className="day-header">
@@ -217,7 +217,6 @@ class Schedule extends React.Component {
 
     getData(newDate) {
         var date = newDate.getFullYear() + '-' + (newDate.getMonth() < 9 ? '0':'') + (newDate.getMonth()+1) + '-' + (newDate.getDate() < 10 ? '0':'') + (newDate.getDate()) ;
-        console.log(date);
 
         //get new data
         firebase.firestore().collection("dates").doc(date)
@@ -254,7 +253,7 @@ class Schedule extends React.Component {
         })
         .catch(function(error) {
             //Date doesn't exist 
-            //firebaseCreateDate(date);
+            firebaseCreateDate(date);
             console.error("ERROR: Couldn't access date: ", error)
         });
     }

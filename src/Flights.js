@@ -93,8 +93,8 @@ function RenderFlightDayHeader(props) {
     var curDate = new Date();
     var diff = Math.round((displayDate.getTime() - curDate.getTime())/(24*60*60*1000));
 
-    // Only show flights for last 3 days to the next 2 weeks
-    var disableLeft = diff === -3;
+    // Only show flights for last week to the next 2 weeks
+    var disableLeft = diff === -7;
     var disableRight= diff === 14;
 
     return (
@@ -331,6 +331,7 @@ class Flights extends React.Component {
                 console.log("Document successfully written!");
                 })
                 .catch(function(error) {
+                    firebaseCreateDate(date);
                 console.error("Error writing document: ", error);
             });
         }

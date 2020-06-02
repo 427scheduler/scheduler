@@ -162,13 +162,24 @@ function Approvals(props) {
 }
 
 function changeTeam(e, pilot, oldVal) {
-    if (isNaN(e.target.value)) {
-        e.target.value = oldVal;
+    var newTeam = e.target.value;
+    if (isNaN(newTeam)) {
+        //Invalid input, ignore
+        newTeam = oldVal;
+        return;
     }
     else {
         firebase.firestore().collection("pilots").doc(pilot).update({team: e.target.value});
-        firebase.firestore().collection("pilots").doc(oldVal).update({pilots: firebase.firestore.FieldValue.arrayRemove(pilot)});
-        firebase.firestore().collection("pilots").doc(e.target.value).update({pilots: firebase.firestore.FieldValue.arrayUnion(pilot)});
+        firebase.firestore().collection("pilots").doc(oldVal.toString()).update({pilots: firebase.firestore.FieldValue.arrayRemove(pilot)});
+       
+        firebase.firestore().collection("pilots").doc(newTeam.toString()).get().then((snapshotQuery)=> {
+            if (snapshotQuery.exists) {
+                firebase.firestore().collection("pilots").doc(newTeam.toString()).update({pilots: firebase.firestore.FieldValue.arrayUnion(pilot)});
+            }
+            else {
+                firebase.firestore().collection("pilots").doc(newTeam.toString()).set({pilots: [pilot]});
+            }
+        })
     }
 }
 

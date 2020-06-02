@@ -69,7 +69,6 @@ function getCurWeekDates(showWeekends, date) {
 
     //Edge case: if a Sunday is selected and only weekDays are shown, show the next week
     if (date.format('dddd')=="Sunday") {
-        console.log(date, date.format('dddd'))
         var day = showWeekends ? date : date.clone().add(1, 'day');
     }
     else {var day = showWeekends ? date.startOf('week') : date.startOf('isoweek');}
