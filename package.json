@@ -17,7 +17,7 @@
     "react-ga": "^2.7.0",
     "react-native": "^0.62.2",
     "react-scripts": "3.0.0",
-    "xlsx": "^0.16.1"
+    "xlsx": "^0.17.0"
   },
   "scripts": {
     "start": "react-scripts start",
